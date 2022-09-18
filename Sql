@@ -1,0 +1,38 @@
+show databases;  /* to show existing data bases */
+
+create database employee;  -- to create database
+use employee;
+create table empdetails(      -- to create a table
+eno  int primary key,		-- primary key is a unique key.
+emp_name varchar(50),
+salary int ,
+position varchar(50)
+);
+describe empdetails;        -- to show table
+
+insert into empdetails values (01,'Junai',100000,'Developer'),(02,'Shaji', 150000,'Technical Lead'),
+(03,'Nasi',100000,'Technical Support'),(05,'Azar',120000,'Developer'),(0010,'Pughal',300000,'Manager'); -- insert an items to table.
+
+select * from empdetails;			-- To show all the content of the table.
+
+select * from empdetails where salary <> 100000;		-- To show particular data from table
+
+/* key      -     detail
+	=		-	equals to
+    <>		-	not equals to
+    <		-	less than
+    >		-	greater than
+    and		-	to perform and operation
+    OR		-	to perform OR operation
+    in		- 	used to perform multiple OR operation
+    NOT		-	Used to perform logical not performance
+    Between	-	used to get data between specific range
+    limit	-	return certain limit
+    */
+    
+select * from empdetails where emp_name like "___a%";  /* like is used to print in certain pattern. 
+															Usually its comes with wildcard such as _ and %. */
+delete from empdetails where salary = 200000;
+
+    
+
